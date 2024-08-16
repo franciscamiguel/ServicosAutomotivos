@@ -1,0 +1,78 @@
+﻿<Window x:Class="ServiçosAutomotivos.TelaCadastro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiçosAutomotivos"
+        mc:Ignorable="d"
+        Title="Cadastro de Serviço Automotivo" Height="450" Width="800">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Título -->
+        <TextBlock Text="Cadastro de Serviço Automotivo" 
+                   FontSize="20" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,20,0,20"/>
+
+        <!-- Campos de Cadastro -->
+        <GroupBox Header="Informações do Serviço" Margin="0,0,0,20" Grid.Row="1">
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Nome do Serviço -->
+                <Label Content="Nome do Serviço:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <TextBox x:Name="txtNome" Margin="0,0,0,5"/>
+                </Grid>
+
+                <!-- Descrição Breve -->
+                <Label Content="Descrição Breve:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <TextBox x:Name="txtDescricao" Margin="0,0,0,5"/>
+                </Grid>
+
+                <!-- Custo Aproximado -->
+                <Label Content="Custo Aproximado:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <TextBox x:Name="txtCusto" Margin="0,0,0,5"
+                    InputScope="Number"/>
+                </Grid>
+                
+                <!-- Tempo Estimado -->
+                    <Label Content="Tempo Estimado:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <TextBox x:Name="txtTempo" Margin="0,0,0,5"
+                         InputScope="Number"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+
+        <!-- Botão Salvar -->
+        <Button Content="Salvar" 
+                Width="150" 
+                Height="40" 
+                HorizontalAlignment="Center" 
+                Grid.Row="2" 
+                Click="Salvar_Click"/>
+
+        <!-- Botão para Navegar para a Tela de Consulta -->
+        <Button Content="Ir para Tela de Consulta" Click="IrParaTelaConsulta_Click" Margin="0,10,0,0"/>
+    </Grid>
+
+</Window>
