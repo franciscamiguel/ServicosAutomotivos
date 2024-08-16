@@ -19,6 +19,6 @@ Este é um aplicativo WPF para cadastro e consulta de serviços automotivos. Ele
 ## Instalação
 1. **Clone o Repositório**:
    ```bash
-   git clone https://github.com/franciscamiguel/ServicosAutomotivos
+   git clone https://github.com/franciscamiguel/ServicosAutomotivos.git
    cd ServicosAutomotivos
 
